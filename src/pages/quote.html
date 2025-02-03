@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aronni Soluções</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #333;
+        }
+        .navbar img {
+            height: 50px;
+            margin-right: 20px;
+            border-radius: 100px;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            margin-left: auto;
+        }
+        .navbar li {
+            margin-left: 60px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        main {
+            flex: 1;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="c:\Users\LUIS\Desktop\aronni-solucoes-1\src\image\logoaronni.jpg" alt="Logo">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="services.html">Serviços</a></li>
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="contact.html">Contato</a></li>
+        </ul>
+    </div>
+    <main>
+        <h1>Solicitação de Orçamento</h1>
+        <form action="https://formsubmit.co/YOUR_NETLIFY_FORM_ENDPOINT" method="POST">
+            <label for="empresa">Empresa:</label>
+            <input type="text" id="empresa" name="empresa" required>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="cargo">Cargo:</label>
+            <input type="text" id="cargo" name="cargo" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="servicos">Serviços:</label>
+            <select id="servicos" name="servicos" required>
+                <option value="limpeza">Limpeza Airbnb</option>
+                <option value="manutenção">Manutençao</option>
+                <option value="restaurantes">Restaurantes</option>
+                <option value="Hotelaria">Hotelaria</option>
+                <option value="Outros">Outros</option>
+            </select>
+
+            <label for="informacoes">Informações Complementares:</label>
+            <textarea id="informacoes" name="informacoes" rows="4" cols="50"></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Create a loading animation
+            const loadingAnimation = document.createElement('div');
+            loadingAnimation.innerHTML = 'Enviando...';
+            loadingAnimation.style.fontSize = '20px';
+            loadingAnimation.style.fontWeight = 'bold';
+            loadingAnimation.style.textAlign = 'center';
+            loadingAnimation.style.marginTop = '20px';
+            
+            // Hide the form and show the loading animation
+            this.style.display = 'none';
+            document.body.appendChild(loadingAnimation);
+
+            // Simulate form submission delay
+            setTimeout(() => {
+                this.submit(); // Submit the form after the delay
+            }, 2000); // 2 seconds delay
+        });
+    </script>
+</body>
+</html>

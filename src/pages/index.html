@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aronni Soluções</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding-bottom: 60px; /* Espaço para o rodapé fixo */
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #333;
+        }
+        .navbar img {
+            height: 50px;
+            margin-right: 20px;
+            border-radius: 100px;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            margin-left: auto;
+        }
+        .navbar li {
+            margin-left: 60px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .banner {
+            background-size: cover;
+            background-position: center;
+            color: rgb(5, 5, 5);
+            text-align: center;
+            padding: 50px 20px;
+            background-color: rgb(117, 126, 126);
+        }
+        .banner h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+        .banner p {
+            font-size: 24px;
+            margin: 10px 0 0;
+        }
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .service-card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .service-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .service-card h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .service-card p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .service-card button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .service-card button:hover {
+            background-color: #555;
+        }
+        .about {
+            background-color: #f0f0f0;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin: 20px;
+        }
+        .about h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .about p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .about button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .about button:hover {
+            background-color: #555;
+        }
+        .reviews {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            margin: 20px;
+        }
+        .review-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .review-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .review-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .review-card p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .review-card h3 {
+            font-size: 18px;
+            margin: 0;
+            color: #333;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .footer-content p {
+            margin: 0;
+            font-size: 16px;
+        }
+        .whatsapp-button {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .whatsapp-button img {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="c:\Users\LUIS\Desktop\aronni-solucoes-1\src\image\logoaronni.jpg" alt="Logo">
+        <ul>
+            <li><a href="services.html">Serviços</a></li>
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="contact.html">Contato</a></li>
+            <li><a href="quote.html">Orçamentos</a></li>
+        </ul>
+    </div>
+    <div class="banner">
+        <h1>Bem-vindo à Aronni Soluções</h1>
+        <p>Seu parceiro de soluções</p>
+    </div>
+    <div class="services">
+        <div class="service-card">
+            <img src="c:\Users\LUIS\Desktop\aronni-solucoes-1\src\image\camareira.airbnb.jfif" alt="Limpeza Airbnb">
+            <h2>Limpeza Airbnb</h2>
+            <p>Serviço de limpeza especializado para propriedades Airbnb.</p>
+            <button onclick="location.href='https://wa.me/5511945589907?text=Quero%20saber%20mais%20sobre%20Limpeza%20Airbnb'">Saiba Mais</button>
+        </div>
+        <div class="service-card">
+            <img src="c:\Users\LUIS\Desktop\aronni-solucoes-1\src\image\camareira.hotel.jfif" alt="Camareira">
+            <h2>Camareira</h2>
+            <p>Serviço de camareira para hotéis e pousadas.</p>
+            <button onclick="location.href='https://wa.me/5511945589907?text=Quero%20saber%20mais%20sobre%20Camareira'">Saiba Mais</button>
+        </div>
+        <div class="service-card">
+            <img src="c:\Users\LUIS\Desktop\aronni-solucoes-1\src\image\cozinheiro.jfif" alt="Cozinheiro">
+            <h2>Cozinheiro</h2>
+            <p>Serviço de cozinheiro para eventos e residências.</p>
+            <button onclick="location.href='https://wa.me/5511945589907?text=Quero%20saber%20mais%20sobre%20Cozinheiro'">Saiba Mais</button>
+        </div>
+        <div class="service-card">
+            <img src="c:\Users\LUIS\Desktop\aronni-solucoes-1\src\image\garsom.jfif" alt="Garçom">
+            <h2>Garçom</h2>
+            <p>Serviço de garçom para eventos e restaurantes.</p>
+            <button onclick="location.href='https://wa.me/5511945589907?text=Quero%20saber%20mais%20sobre%20Garçom'">Saiba Mais</button>
+        </div>
+        <div class="service-card">
+            <img src="c:\Users\LUIS\Desktop\aronni-solucoes-1\src\image\manutencao.jfif" alt="Manutenção">
+            <h2>Manutenção</h2>
+            <p>Serviço de manutenção geral para residências e empresas.</p>
+            <button onclick="location.href='https://wa.me/5511945589907?text=Quero%20saber%20mais%20sobre%20Manutenção'">Saiba Mais</button>
+        </div>
+        <div class="service-card">
+            <img src="c:\Users\LUIS\Desktop\aronni-solucoes-1\src\image\asg.hotel.jfif" alt="Auxiliar de Limpeza">
+            <h2>Auxiliar de Limpeza</h2>
+            <p>Serviço de auxiliar de limpeza para diversos ambientes.</p>
+            <button onclick="location.href='https://wa.me/5511945589907?text=Quero%20saber%20mais%20sobre%20Auxiliar%20de%20Limpeza'">Saiba Mais</button>
+        </div>
+        <div class="service-card">
+            <img src="c:\Users\LUIS\Desktop\aronni-solucoes-1\src\image\stuard.jfif" alt="Steward">
+            <h2>Steward</h2>
+            <p>Serviço de steward para cozinhas industriais e eventos.</p>
+            <button onclick="location.href='https://wa.me/5511945589907?text=Quero%20saber%20mais%20sobre%20Steward'">Saiba Mais</button>
+        </div>
+        <div class="service-card">
+            <img src="c:\Users\LUIS\Desktop\aronni-solucoes-1\src\image\auxdecozinha.jfif" alt="Auxiliar de Cozinha">
+            <h2>Auxiliar de Cozinha</h2>
+            <p>Serviço de auxiliar de cozinha para restaurantes e eventos.</p>
+            <button onclick="location.href='https://wa.me/5511945589907?text=Quero%20saber%20mais%20sobre%20Auxiliar%20de%20Cozinha'">Saiba Mais</button>
+        </div>
+        <div class="service-card">
+            <img src="c:\Users\LUIS\Desktop\aronni-solucoes-1\src\image\asg.corporativo.jfif" alt="serviços gerais">
+            <h2>Serviços Gerais</h2>
+            <p>Serviço Gerais para eventos e empresas.</p>
+            <button onclick="location.href='https://wa.me/5511945589907?text=Quero%20saber%20mais%20sobre%20Copeira'">Saiba Mais</button>
+        </div>
+    </div>
+    <div class="about">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma empresa de soluções para hotéis, pousadas, restaurantes, eventos e residências. Oferecemos serviços de limpeza, camareira, cozinheiro, garçom, manutenção, auxiliar de limpeza, steward, auxiliar de cozinha e serviços gerais. Entre em contato para saber mais.</p>
+        <button onclick="location.href='https://wa.me/5511945589907?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Aronni%20Soluções'">Entre em Contato</button>
+    </div>
+    <div class="reviews">
+        <div class="review-card">
+            <img src="c:\Users\LUIS\Desktop\aronni-solucoes-1\src\image\review1.jpg" alt="Cliente 1">
+            <p>"Excelente serviço! Recomendo a todos."</p>
+            <h3>- João Silva</h3>
+        </div>
+        <div class="review-card">
+            <img src="c:\Users\LUIS\Desktop\aronni-solucoes-1\src\image\review2.jpg" alt="Cliente 2">
+            <p>"Profissionais muito competentes e atenciosos."</p>
+            <h3>- Maria Oliveira</h3>
+        </div>
+        <div class="review-card">
+            <img src="c:\Users\LUIS\Desktop\aronni-solucoes-1\src\image\review3.jpg" alt="Cliente 3">
+            <p>"Serviço de alta qualidade e eficiência."</p>
+            <h3>- Carlos Pereira</h3>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>Contato: comercial@aronnisolucoes.com.br | WhatsApp: (11) 94558-9907</p>
+        </div>
+    </footer>
+    <button class="whatsapp-button" onclick="location.href='https://wa.me/5511945589907'">
+        <img src="https://image.flaticon.com/icons/png/512/124/124034.png" alt="WhatsApp">
+    </button>
+</body>
+</html>

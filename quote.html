@@ -98,8 +98,8 @@
         </ul>
     </div>
     <main>
-        <h1>Solicitação de Orçamento</h1>
-        <form action="https://formsubmit.co/YOUR_NETLIFY_FORM_ENDPOINT" method="POST">
+        <form name="quote-form" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="quote-form">
             <label for="empresa">Empresa:</label>
             <input type="text" id="empresa" name="empresa" required>
 

@@ -68,3 +68,4 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou env
 ## Licença
 
 Este projeto está licenciado sob a MIT License. Veja o arquivo LICENSE para mais detalhes.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ed01083d-fb83-46de-80c4-3a35322e32b1/deploy-status)](https://app.netlify.com/sites/aronnisolucoes/deploys)

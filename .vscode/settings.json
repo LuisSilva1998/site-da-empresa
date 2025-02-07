@@ -5,5 +5,11 @@
         "Início",
         "Orçamento",
         "Sobre"
-    ]
+    ],
+    "debug": {
+        "type": "node",
+        "request": "launch",
+        "name": "Launch Program",
+        "program": "${workspaceFolder}/app.js"
+    }
 }

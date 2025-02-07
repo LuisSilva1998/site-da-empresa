@@ -6,7 +6,7 @@
     "configurations": [
         {
             "name": ".NET Core Attach",
-            "type": "coreclr",
+            "type": "node",
             "request": "attach"
         },
         {

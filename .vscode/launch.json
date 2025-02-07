@@ -13,7 +13,7 @@
             "type": "msedge",
             "request": "launch",
             "name": "Open index.html",
-            "file": "c:\\Users\\LUIS\\Desktop\\aronni-solucoes-1\\src\\pages\\index.html"
+            "file": "${workspaceFolder}/index.html"
         }
     ]
 }
